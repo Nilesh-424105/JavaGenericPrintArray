@@ -1,7 +1,8 @@
 package com.generic;
 
 /*
- * Given an array of Integer, Double and Character, write a program to print the same
+ * Given an array of Integer, Double and Character, 
+ * write a program to print the same Using Generic
  */
 
 public class PrintArray {
@@ -18,40 +19,20 @@ public class PrintArray {
 
 		// Calling Different Data Type Method
 		toPrintArray(intArray);
+		System.out.println(" ");
 		toPrintArray(doubleArray);
+		System.out.println(" ");
 		toPrintArray(charArray);
+		System.out.println(" ");
 		toPrintArray(strArray);
 	}
 
-	// Method For Integer
-	private static void toPrintArray(Integer[] intArray) {
-		for (int element : intArray) {
-			System.out.println("To Print Integer Number: " + element);
+	// To Calling Generic Method For Print Array Of Different Data Types
+	private static <T> void toPrintArray(T[] array) {
+		for (T element : array) {
+			System.out.println("To Print Element:  " + element);
 		}
 
 	}
 
-	// Method For Double
-	private static void toPrintArray(Double[] doubleArray) {
-		for (double element : doubleArray) {
-			System.out.println("To Print Double Number: " + element);
-		}
-
-	}
-
-	// Method For Character
-	private static void toPrintArray(Character[] charArray) {
-		for (char element : charArray) {
-			System.out.println("To Print Character : " + element);
-		}
-
-	}
-
-	// Method For String
-	private static void toPrintArray(String[] strArray) {
-		for (String element : strArray) {
-			System.out.println("To Print Name : " + element);
-		}
-
-	}
 }
